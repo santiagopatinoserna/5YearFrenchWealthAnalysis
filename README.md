@@ -1,0 +1,2 @@
+# 5YearFrenchWealthAnalysis
+ This repository focuses on the analysis of individual wealth and the distribution of the "Impôt de solidarité sur la fortune" (ISF) and "Impôt sur la fortune immobilière" (IFI) across communes in France. We leverage historical data to plot current trends and employ statistical models for 5-year projections. The aim is to provide an in-depth view of wealth distribution across various French communes and predict future trends.
