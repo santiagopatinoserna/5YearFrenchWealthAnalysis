@@ -2,7 +2,7 @@
 
 Hello, business innovator! 🌍 I'm Santiago PATINO SERNA, the CEO and data scientist of Godi.AI. This repository is a testament to our commitment to harnessing the power of data to provide actionable insights. The notebook you're about to dive into is a comprehensive analysis of the wealth tax in French communes.
 
-## 📊 Notebook Overview
+## 📊 Notebook Overview ![Notebook on Github](https://github.com/santiagopatinoserna/5YearFrenchWealthAnalysis/blob/main/Script/Exploration/Data%20Exploration%20and%20Initial%20Analysis.ipynb)  
 
 ### Exploratory Data Analysis of Wealth Tax in French Communes
 
