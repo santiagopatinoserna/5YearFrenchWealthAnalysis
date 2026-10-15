@@ -1,65 +1,46 @@
-# 🚀 Welcome to Godi.AI's Data Exploration and Initial Analysis
+# French IFI tax: exploratory data analysis
 
-Hello, business innovator! 🌍 I'm Santiago PATINO SERNA, the CEO and data scientist of Godi.AI. This repository is a testament to our commitment to harnessing the power of data to provide actionable insights. The notebook you're about to dive into is a comprehensive analysis of the wealth tax in French communes.
+An exploratory analysis of French municipal real-estate wealth-tax statistics. It covers data preparation, geographic joins, distributions, growth summaries and exports for Power BI.
 
-## 📊 Notebook Overview 
-[Notebook on Github](https://github.com/santiagopatinoserna/5YearFrenchWealthAnalysis/blob/main/Script/Exploration/Data%20Exploration%20and%20Initial%20Analysis.ipynb)  
+## What is implemented
 
-### Exploratory Data Analysis of Wealth Tax in French Communes
+[Exploration notebook](Script/Exploration/Data%20Exploration%20and%20Initial%20Analysis.ipynb):
 
-- **Basic Setup:** Initialization of necessary libraries and tools.
-- **Dtypes Selecting:** Setting up the data types for efficient processing.
-- **Reading Files:** Importing the wealth tax data from various files.
+- Read and combine the bundled tax spreadsheets.
+- Clean commune identifiers and join commune information.
+- Explore taxpayer counts, average assets and average tax amounts.
+- Produce charts, correlations and tables for geographic and year-by-year comparisons.
+- Export analysis tables in `DataOut/` and dashboard inputs in `DataOut/PowerBI/`.
 
-### Initial Data Cleaning
+## Interpretation limits
 
-Our first step is ensuring the data's integrity by preprocessing and cleaning it.
+These are aggregate tax statistics, not a census of household wealth. Coverage, missing records and filtering affect comparisons between communes and years. Correlations are descriptive, not causal. Normalized tables are visualization inputs, not euro-denominated values.
 
-### Basic Data Analysis, Visualization, and Further Cleaning
+This repository is the exploratory stage of a three-part project. [Model comparison](https://github.com/santiagopatinoserna/TensorFlow_Prediction_5YearFrench_IFI) and [recursive projections](https://github.com/santiagopatinoserna/Prediction_5Years_IFITAX) live in separate repositories; their existence does not validate a forecast here.
 
-Dive deep into:
-- Distribution across regions, departments, and cities.
-- Key metrics such as the number of taxpayers, average assets in Euro, and average tax in Euro.
+## Reproduction notes
 
-### EDA: Exploratory Data Analysis & POWERBI Integration
+Open the notebook in Jupyter and adapt the hardcoded input/output paths to this checkout. Its imports include pandas, NumPy, matplotlib, seaborn and scikit-learn. Reading the bundled `.xls` and `.xlsx` files requires compatible Excel readers. There is no locked original environment, and installing current dependencies has not been tested as an end-to-end reproduction.
 
-Detailed insights into:
-- Key Performance Indicators (KPIs) for average tax, assets, and taxpayers at the regional and city levels.
-- Time series representations depicting growth trends over the years.
+## Saved artifacts
 
-### Correlation Analyses
+![Saved dashboard overview](IFI5Years.png)
 
-Discover:
-- How various variables correlate with regions.
-- Distinct correlations for each department.
+- `DataOut/df_ificom.csv`: exported analysis table.
+- `DataOut/PowerBI/df_base.csv`: base dashboard table.
+- `DataOut/PowerBI/df_base_norm.csv`: normalized dashboard table.
+- `DataOut/PowerBI/avg_growth_df.csv`: derived growth summaries.
 
----
+These are saved outputs from the original analysis, not newly generated results.
 
-## 📸 Key Visual Insights
+## Project status
 
-![Insight 1](https://dam.malt.com/99f0b514-632b-4fb5-8197-f82b92060c32)  
-*Analyse Multidimensionnelle des Contribuables IFI Français : Impôts, Patrimoine & Régions*
+Historical exploratory work using the 2019 to 2022 IFI input files kept in `DataIn/`. This is a research notebook, not a deployed service. The notebooks and exported results have not been rerun end to end in the current environment.
 
-![Insight 2](https://dam.malt.com/a95ac7cf-7c99-4ccf-875c-5b0d757b235c)  
-*Distribution Analysis of Data with KDE*
+## Data and reuse
 
-![Insight 3](https://dam.malt.com/71114ee4-8f1d-49a0-aceb-d69d2f7a01a8)
-*Top 10 Cities of 2022 IFI: Total Taxpayers, Average Assets, Average Tax*
+The tax input files are attributed in the project notebooks to the French public dataset *Impôt de solidarité sur la fortune / Impôt sur la fortune immobilière par collectivité territoriale*. Commune coordinates and lookup tables are included in `DataIn/`. Source files and derived tables retain their applicable upstream terms; this repository does not grant a new licence over those datasets. Check the original publisher and the terms for each input before redistribution.
 
-![Insight 4](https://dam.malt.com/49b14775-cb94-4228-9603-c94983ef1290)  
-*Time Series of the Top Flop (Relative Change) for IFI France Metrics*
+## Author
 
-![Insight 5](https://dam.malt.com/dc2f35b5-f63a-484e-b7db-af2f13b8fcc8)  
-*City-wise Correlation Index in Relation to the IFI Tax in France*
-
----
-
-## 🤖 About Godi.AI
-
-Godi.AI is the startup reshaping how businesses experience AI. We focus on speed, ROI, and guiding businesses on their digitalization journey. Dive into our standout apps, or explore tailored solutions with our Godi.AI Freelancer method.
-
-**Special Note:** For businesses seeking an even more customized experience, reach out to me directly. As a proud Polytechnique Paris graduate, I am here to turn your data into insightful, actionable decisions.
-
-📩 **Get Started:** Ready to embark on this transformative journey with Godi.AI? [Reach out to us!](https://godi.ai/freelancing/)
-
-📔 **Explore the Notebook:** For a detailed dive, explore the [Data Exploration and Initial Analysis Notebook](https://github.com/santiagopatinoserna/5YearFrenchWealthAnalysis/blob/main/Script/Exploration/Data%20Exploration%20and%20Initial%20Analysis.ipynb) on GitHub.
+Santiago Patiño Serna. [LinkedIn](https://www.linkedin.com/in/santiago-patino/) · [Godi.AI](https://godi.ai).
